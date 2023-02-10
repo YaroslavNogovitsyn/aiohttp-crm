@@ -1,6 +1,8 @@
 import typing
 from typing import Optional
 
+from app.crm.models import User
+
 if typing.TYPE_CHECKING:
     from app.web.app import Application
 
@@ -23,4 +25,8 @@ class CrmAccessor:
 
     async def add_user(self, user):
         self.app.database["users"].append(user)
+
+    async def list_users(self) -> list[User]:
+        return self.app.database["users"]
+
     
