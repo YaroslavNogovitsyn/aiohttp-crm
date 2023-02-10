@@ -1,7 +1,5 @@
-from aiohttp.abc import Application
-
-from app.crm.views import index
+from app.web.app import Application
 
 
 def setup_routes(app: Application):
-    app.router.add_get('/index', index)
+    pass
