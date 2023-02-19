@@ -23,10 +23,6 @@ class UserGetResponseSchema(OkResponseSchema):
     data = fields.Nested(UserGetSchema)
 
 
-class GetUserResponseSchema(OkResponseSchema):
-    data = fields.Nested
-
-
 class ListUsersSchema(Schema):
     users = fields.Nested(UserSchema, many=True)
 
