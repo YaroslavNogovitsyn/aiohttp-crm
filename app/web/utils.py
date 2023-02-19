@@ -9,5 +9,5 @@ def json_response(data: Any = None, status: str = 'ok') -> Response:
         data = {}
     return aiohttp_json_response(data={
         'status': status,
-        'data': data
+        'data': data,
     })
